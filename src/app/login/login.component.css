@@ -1,0 +1,236 @@
+/* form total editing */
+/* f1 */
+
+#f1 {
+    background-color: rgb(208, 221, 221);
+    
+    border-radius: 20px;
+    height: 300px;
+    margin-left: 16px;
+
+}
+
+/* input */
+.ina {
+    width: 390px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    overflow: none;
+
+
+}
+
+.col-6 {
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+form:hover {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+}
+
+
+
+
+
+/* 
+@media screen and (max-width: px){
+  
+  
+  }
+   */
+
+
+
+
+@media screen and (max-width: 893px) {
+
+    .textsize {
+        font-size: large;
+
+    }
+
+    .p-2 {
+        font-size: small;
+    }
+
+    .loginImage {
+        height: 100px;
+        width: 380px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 884px) {
+
+    .loginImage {
+        display: none;
+    }
+
+    .textsize {
+        margin-top: 100px;
+    }
+
+    #f1 {
+        width: 20px;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 873px) {
+    .col-6 {
+        width: 100%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1215px) {
+    .ina {
+        width: 340px;
+    }
+   
+
+}
+
+
+@media screen and (max-width: 1038px) {
+    .ina {
+        width: 290px;
+    }
+   
+ 
+
+}
+
+
+
+
+
+@media screen and (max-width: 896px) {
+    .ina {
+        width: 260px;
+    }
+   
+
+}
+
+
+
+
+@media screen and (max-width: 872px) {
+    .ina {
+        width: 600px;
+    }
+
+    #f1 {
+        margin-left: 90px;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    .ina {
+        width: 500px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 703px) {
+    .ina {
+        width: 410px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 597px) {
+    .ina {
+        width: 310px;
+    }
+
+}
+
+
+@media screen and (max-width: 488px) {
+   #f1{
+    height: 340px;
+   }
+
+}
+
+@media screen and (max-width: 458px) {
+    .ina {
+        width: 260px;
+    }
+    #f1 {
+        margin-left: 70px;
+    }
+}
+
+
+@media screen and (max-width: 395px) {
+    .ina {
+        width: 240px;
+    }
+    #f1 {
+        margin-left: 60px;
+    }
+}
+
+
+@media screen and (max-width: 362px) {
+    .ina {
+        width: 220px;
+    }
+    #f1 {
+        margin-left: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 415px) {
+    #f1 {
+        margin-left: 48px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+@media screen and (max-width: 912px) {
+    #f1{
+     height: 360px;
+    }
+ 
+ }
+
+
+
+
+ @media screen and (max-width: 280px) {
+    .ina {
+        width: 170px;
+    }
+    #f1 {
+        /* margin-left: 20px; */
+        height: 400px;
+    }
+
+}

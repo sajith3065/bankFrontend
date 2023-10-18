@@ -1,0 +1,145 @@
+        <!-- Delete -->
+        <app-delete [data]="dAcno" (onCancel)="cancelp()" (onDelete)="yesDelete($event)"></app-delete>
+
+
+<div class="">
+    
+    <div class="text-center row">
+        <!-- contents -->
+        <div [ngClass]="dAcno?'c2':''" class="col-4 ">
+            <div class="list-group  ">
+
+                <a (click)="getProfile()" class="list-group-item list-group-item-action" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal1">View Profile</a>
+                <a (click)="getBalance()" class="list-group-item list-group-item-action " data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Balance Enquiery</a>
+
+                <a class="list-group-item list-group-item-action" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                    role="button" aria-controls="offcanvasExample">Money Transfer</a>
+
+                <a routerLink="/history" class="list-group-item list-group-item-action">Account Statement</a>
+                <a (click)="logout()" class="list-group-item list-group-item-action">Logout</a>
+                <a (click)="deleteActive()" class="list-group-item list-group-item-action">Delete Account</a>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- image and description -->
+        <div [ngClass]="dAcno?'c2':''" class="col-8">
+
+            <h3 class="makeSmall" style="color: black;">Hi.. Welcome..{{name}}</h3>
+
+            <h4 class="makeSmall">Welcome to <span>My Bank</span> - your financial partner <br> for a brighter future! </h4>
+            <p class="makeSmall" style="padding: 10px;">At <span style="font-weight: 500; font-size: larger;">My Bank</span>, we're more
+                than just a financial institution; we're a community that values integrity, transparency, and mutual
+                growth. Join us on this journey towards financial freedom, and experience banking redefined. Your dreams
+                are now within reach, and together, we can make them a reality.</p>
+            <p class="makeSmall">Discover the future of banking with <span style="font-weight: 500; font-size: larger;">My Bank</span> -
+                where your aspirations come first.
+            </p>
+            <img  id="image1" src="https://i.postimg.cc/jdXM4wQk/My-project-1.png" alt="">
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+</div>
+
+                    <!-- MoDals -->
+
+
+<!-- Balance Enquiry-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(11 79 88); color: aliceblue;">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Balance Details</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Hello, <span>{{name}}</span></h4>
+                <div class="text-center">
+                    <img style="height: 150px;" src="https://i.postimg.cc/c4KhsW3d/My-project-3.png" alt="">
+                </div>
+                <h6>Your current Balance in Account Number <span>{{acno}}</span> is;</h6>
+                <h4><span>Rs-{{balance}}</span> Only</h4>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Money transfer -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header bg-dark text-white">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Transfer Money</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="text-center ">
+            <img style="height: 300px;" src="https://i.postimg.cc/qR5mLvKZ/Money-Transfer-1.png" alt="">
+        </div>
+        <form [formGroup]="moneyTransferForm" action="" class="p-3 mt-1">
+            <input formControlName="rAcno" type="text" class="form-control mt-2" id="rac" name="ac"
+                placeholder="To Account">
+            <!-- reminder -->
+            <p *ngIf="moneyTransferForm.get('rAcno')?.errors && moneyTransferForm.get('rAcno')?.touched"
+                class="text-danger">Only Numbers Accepted</p>
+
+            <input formControlName="amount" type="text" class="form-control mt-2" id="amnt" name="amn"
+                placeholder="Amount">
+            <!-- reminder -->
+            <p *ngIf="moneyTransferForm.get('amount')?.errors && moneyTransferForm.get('amount')?.touched"
+                class="text-danger">Only Numbers Accepted</p>
+
+            <input formControlName="psw" type="password" class="form-control mt-2" id="ps" name="psn"
+                placeholder="Password">
+            <!-- reminder -->
+            <p *ngIf="moneyTransferForm.get('psw')?.errors && moneyTransferForm.get('psw')?.touched"
+                class="text-danger">Only Numbers, characters symbols Accepted</p>
+
+        </form>
+
+        <div class="d-grid gap-2">
+            <button (click)="moneyTransfer()" style="background-color: rgb(11 79 88); color: aliceblue;" class="btn btn"
+                type="button">Send Money</button>
+
+        </div>
+
+        <!-- response Message -->
+        <div class="text-center p-1 mt-3">
+            <p [ngClass]="msgClr?'s1':'s2'">{{message}}</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- View Profile -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header " style="background-color: rgb(11 79 88); color: aliceblue;">
+                <h1 class="modal-title fs-4 " id="exampleModalLabel">My profile</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <img style="height: 200px;" src="https://i.postimg.cc/YSLbbHpX/My-project-2.png" alt="">
+                </div>
+                <p>User Name: <span>{{name}}</span></p>
+                <p>Account Number: <span>{{acno}}</span></p>
+            </div>
+
+        </div>
+    </div>
+</div>

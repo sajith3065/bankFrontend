@@ -1,0 +1,81 @@
+<div class=" ">
+
+    <div class="text-center row " style="margin-top: 60px; ">
+        <!-- Login Form -->
+        <div class="col-6 ">
+            <!-- here, we use [formGroup] to bind -->
+            <form [formGroup]="signupForm" id="f1" class="mt-3 p-3 container  text-center border">
+                <h3>Sign In Here!!</h3>
+                <!-- here we use "Formcontrolname " attribute in input -->
+                <!-- ACNO -->
+                <div class=" mb-3 ">
+                    <input formControlName="acno" type="text" class="ina" id="a1" name="acno"
+                        placeholder="Account Number" aria-describedby="emailHelp">
+
+                </div>
+                <!-- Error Mesage for Acno -->
+                <div *ngIf="this.signupForm.get('acno')?.errors && this.signupForm.get('acno')?.touched">
+                    <p class="text-danger " style="font-size: small;">Accpet Only Numbers</p>
+
+                </div>
+
+                <!-- Uname -->
+                <div class=" mb-3 ">
+                    <input formControlName="uname" type="text" class="ina" id="u1" name="uname" placeholder="Username">
+
+                </div>
+                <!-- Error Mesage for Uname -->
+                <div *ngIf="this.signupForm.get('uname')?.errors && this.signupForm.get('uname')?.touched">
+                    <p class="text-danger" style="font-size:small;">Accpet Only Characters</p>
+
+                </div>
+
+                <!-- Password -->
+                <div class=" mb-3 ">
+                    <input formControlName="psw" type="password" class="ina" id="p1" name="password"
+                        placeholder="Enter Password">
+
+                </div>
+                <!-- error message for Pasword -->
+                <div *ngIf="this.signupForm.get('psw')?.errors && this.signupForm.get('psw')?.touched">
+                    <p class="text-danger" style="font-size:small;">Only Characters and Numbers Only</p>
+
+                </div>
+
+
+                <!-- Confirm password -->
+                <div class="mb-3 ">
+                    <input formControlName="cpsw" type="password" class="ina" id="p2" name="password1"
+                        placeholder="Confirm Password">
+                </div>
+                <!-- error message for Confirm Passowrd -->
+                <div *ngIf="pswCheck">
+                    <p class="text-danger" style="font-size:small;">Password Doesn't Match</p>
+
+                </div>
+
+                <button (click)="signup()" style="background-color: rgb(11 79 88); color: aliceblue;" type="submit"
+                    class="btn btn mt-1">Sign In</button>
+            </form>
+        </div>
+
+
+
+        <!-- Picture -->
+        <div class="col-6">
+            <h3 class="heading">Introducing <strong style="color: rgb(11 79 88);">"MY Bank"</strong>Your Trusted Partner in Finance!
+            </h3>
+            <p class="p-2">In just a few easy steps, you can open an account and unlock a range of
+                exclusive benefits. We prioritize your privacy and data security,
+                ensuring that your personal information remains confidential at all
+                times. <br> Begin your financial adventure today by signing up with "MY Bank" - where trust meets
+                innovation, and your dreams find a new home. Let's build a
+                brighter future together!</p>
+            <img class="image" style="height: 350px;" src="https://i.postimg.cc/0yxnGJn6/My-project.png" alt="">
+
+
+        </div>
+
+    </div>
+
+</div>

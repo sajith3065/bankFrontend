@@ -1,0 +1,55 @@
+<div class=" ">
+    <!-- Here String Interpollation applied from Ts File -->
+    <h4 class="ms-2"></h4>
+    <div class="text-center row " style="margin-top: 50px; ">
+        <!-- Login Form -->
+        <div class="col-6 ">
+            <form [formGroup]="loginForm" id="f1" class="mt-5    text-center border" style="width: 75%; padding: 20px;">
+                <h3>Log In Here!!</h3>
+                <!-- enetr Account Num -->
+                <div class="mb-3 ">
+                    <input  formControlName="acno" type="text" class="ina" id="u1" name="accNum" [placeholder]="data2">
+                </div>
+                <!-- reminder -->
+                <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched">
+                    <p class="text-danger" style="font-size: small;">Numbers Only</p>
+                </div>
+
+                <!-- enter password -->
+                <div class="mb-3 ">
+                    <input formControlName="psw" type="password" class="ina" id="p1" name="pass" placeholder="Password">
+                </div>
+                <!-- reminder -->
+                <div *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched">
+                    <p class="text-danger" style="font-size: small;">Accept Only Special Characters, Numbers and
+                        Characters</p>
+                </div>
+
+
+
+                <button (click)="login()" type="submit" class="btn btn mt-2"
+                    style="background-color: rgb(11 79 88); color: aliceblue;">Log In</button>
+                <p class="mt-2">Don't Have an Account? <a routerLink="signup" style="text-decoration: none;">
+                        <strong>Create Account!</strong></a></p>
+            </form>
+        </div>
+
+
+        <!-- Picture -->
+        <div class="col-6">
+            <h3 class="textsize">Welcome to the <strong style="color: rgb(11 79 88);">"MY Bank"</strong> family!</h3>
+            <p class="p-2">Embrace the future of banking with "My Bank" and experience banking
+                redefined. Your dreams are our priority, and together, we can turn
+                them into realities. Join us today and witness the difference that
+                trust, innovation, and reliability can make in your financial
+                journey.</p>
+            <p class="p-2">Welcome to <strong style="color: rgb(11 79 88);">"My Bank"</strong> - where your success is
+                our mission!</p>
+            <img class="loginImage" style="height: 300px;" src="https://i.postimg.cc/jjK6WnXv/Screenshot-2023-08-02-105342.jpg" alt="">
+
+
+        </div>
+
+    </div>
+
+</div>

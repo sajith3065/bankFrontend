@@ -1,0 +1,220 @@
+/* form total editing */
+/* f1 */
+
+#f1 {
+    background-color: rgb(208, 221, 221);
+
+    border-radius: 20px;
+    height: 390px;
+    width: 75%;
+
+}
+
+/* input */
+.ina {
+    width: 390px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+
+}
+
+form:hover {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
+}
+
+
+
+/* 
+@media screen and (max-width: px){
+  
+  
+  }
+   */
+
+
+@media screen and (max-width: 1151px) {
+    .ina {
+        width: 360px;
+    }
+
+}
+
+@media screen and (max-width: 1065px) {
+    .ina {
+        width: 320px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 951px) {
+    .ina {
+        width: 290px;
+    }
+
+    .image {
+        width: 390px;
+        height: 50px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 878px) {
+    .ina {
+        width: 270px;
+    }
+
+}
+
+
+@media screen and (max-width: 830px) {
+    .ina {
+        width: 250px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .heading {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .ina {
+        width: 240px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 755px) {
+    /* .ina {
+        width: 320px;
+    } */
+
+    .col-6 {
+        width: 100%;
+
+    }
+
+    .heading {
+        font-size: larger;
+    }
+
+    .ina {
+        width: 470px;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 665px) {
+
+    .ina {
+        width: 440px;
+    }
+}
+
+
+
+@media screen and (max-width: 626px) {
+
+    .ina {
+        width: 420px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 595px) {
+
+    .ina {
+        width: 380px;
+    }
+}
+
+
+
+@media screen and (max-width: 545px) {
+   
+    .ina{
+    width: 340px;
+    }
+    }
+
+
+    
+@media screen and (max-width: 494px) {
+   
+    .ina{
+    width: 310px;
+    }
+    }
+
+
+
+
+    
+@media screen and (max-width: 455px) {
+   
+    .ina{
+    width: 270px;
+    }
+    }
+
+
+    
+@media screen and (max-width: 398px) {
+   
+    .ina{
+    width: 230px;
+    }
+    }
+
+
+
+
+    
+@media screen and (max-width: 352px) {
+   
+    .ina{
+    width: 200px;
+    }
+    }
+
+
+
+    
+@media screen and (max-width: 309px) {
+   
+    .ina{
+    width: 180px;
+    }
+    }
+
+
+    
+    
+@media screen and (max-width: 280px) {
+   
+    #f1{
+   height: 420px;
+    }
+    }
